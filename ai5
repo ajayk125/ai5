@@ -7,8 +7,7 @@ responses = {
 
  "i want to place an order": ["->Great! What would you like to order?"],
 
- "what is your return policy": ["-> Our return policy is product must not be damage,product must
-be same as we send you.Is there anything else you need help with?"],
+ "what is your return policy": ["-> Our return policy is product must not be damage,product must be same as we send you.Is there anything else you need help with?"],
 
  "i want to do enquiry": ["->Of course!What is it"],
 
@@ -25,19 +24,17 @@ be same as we send you.Is there anything else you need help with?"],
  "cash on delivery": ["->ok thanks for order"],
 
 
- "how are you": ["->I'm doing well, thank you!", "->I'm fine, thanks for asking.", "->Pretty
-good!"],
+ "how are you": ["->I'm doing well, thank you!", "->I'm fine, thanks for asking.", "->Pretty good!"],
 
- "default": ["->I'm sorry, I didn't understand what you said.", "->Can you please rephrase that?", "-
->I'm not sure what you mean."]
+ "default": ["->I'm sorry, I didn't understand what you said.", "->Can you please rephrase that?", "->I'm not sure what you mean."]
 }
 
 # Define a function to respond to user input
 def chatbot_response(user_input):
  if user_input.lower() in responses:
- return random.choice(responses[user_input.lower()])
+  return random.choice(responses[user_input.lower()])
  else:
- return random.choice(responses["default"])
+  return random.choice(responses["default"])
 # Chat with the user
 print("Hi, I'm a simple chatbot. What can I help you with today?")
 while True:
